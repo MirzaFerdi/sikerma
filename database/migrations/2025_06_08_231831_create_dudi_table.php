@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('alamat');
             $table->string('email')->unique();
             $table->string('no_telp');
-            $table->enum('status', ['request', 'accepted', 'rejected']);
+            $table->enum('status', ['request', 'accepted', 'rejected'])->default('request');
+            $table->text('catatan')->nullable();
             $table->string('nama_contact_person')->nullable();
             $table->string('jabatan_contact_person')->nullable();
             $table->string('no_telp_contact_person')->nullable();

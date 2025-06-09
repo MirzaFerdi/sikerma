@@ -28,5 +28,11 @@ Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [AuthController::class, 'index'])->name('dashboard');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
     Route::get('/dudi', [DudiController::class, 'index'])->name('dudi.index');
+    Route::post('/dudi/store', [DudiController::class, 'store'])->name('dudi.store');
+    Route::get('/dudi/create', [DudiController::class, 'create'])->name('dudi.create');
+    Route::put('/dudi/{dudi}', [DudiController::class, 'update'])->name('dudi.update');
+    Route::delete('/dudi/{dudi}', [DudiController::class, 'destroy'])->name('dudi.destroy');
+    Route::put('/dudi/update-status/{dudi}', [DudiController::class, 'updateStatus'])->name('dudi.validate');
 });
