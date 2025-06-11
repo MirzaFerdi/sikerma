@@ -26,8 +26,16 @@
 
     </div>
 
+    @yield('scripts')
+
+    <script>
+        $(function() {
+            bsCustomFileInput.init();
+        });
+    </script>
     <script src="{{ asset('adminlte/plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('adminlte/plugins/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
     <script src="{{ asset('adminlte/js/adminlte.min.js') }}"></script>
 </body>
 

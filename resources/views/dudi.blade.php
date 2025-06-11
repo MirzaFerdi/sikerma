@@ -11,57 +11,54 @@
                     <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tambahDudiModal">
                         <i class="fas fa-plus"></i> Tambah Dudi
                     </button>
+                </div>
 
-                    <!-- Modal Tambah -->
-                    <div class="modal fade" id="tambahDudiModal" tabindex="-1" role="dialog"
-                        aria-labelledby="tambahDudiModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <form action="{{ route('dudi.store') }}" method="POST">
-                                    @csrf
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="tambahDudiModalLabel">Tambah Dudi</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
+                <!-- Modal Tambah -->
+                <div class="modal fade" id="tambahDudiModal" tabindex="-1" role="dialog"
+                    aria-labelledby="tambahDudiModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <form action="{{ route('dudi.store') }}" method="POST">
+                                @csrf
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="tambahDudiModalLabel">Tambah Dudi</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="mb-3">
+                                        <label for="nama_dudi" class="form-label">Nama Dudi</label>
+                                        <input type="text" class="form-control" id="nama_dudi" name="nama_dudi" required>
                                     </div>
-                                    <div class="modal-body">
-                                        <div class="mb-3">
-                                            <label for="nama_dudi" class="form-label">Nama Dudi</label>
-                                            <input type="text" class="form-control" id="nama_dudi" name="nama_dudi"
-                                                required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="nama_contact_person" class="form-label">Nama Penanggung
-                                                Jawab</label>
-                                            <input type="text" class="form-control" id="nama_contact_person"
-                                                name="nama_contact_person" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="email" class="form-label">Email</label>
-                                            <input type="email" class="form-control" id="email" name="email"
-                                                required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="no_telp" class="form-label">No. Telp</label>
-                                            <input type="text" class="form-control" id="no_telp" name="no_telp"
-                                                required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="alamat" class="form-label">Alamat</label>
-                                            <textarea class="form-control" id="alamat" name="alamat" rows="2" required></textarea>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="catatan" class="form-label">Catatan</label>
-                                            <textarea class="form-control" id="catatan" name="catatan" rows="2"></textarea>
-                                        </div>
+                                    <div class="mb-3">
+                                        <label for="nama_contact_person" class="form-label">Nama Penanggung
+                                            Jawab</label>
+                                        <input type="text" class="form-control" id="nama_contact_person"
+                                            name="nama_contact_person" required>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                        <button type="submit" class="btn btn-primary">Simpan</button>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
                                     </div>
-                                </form>
-                            </div>
+                                    <div class="mb-3">
+                                        <label for="no_telp" class="form-label">No. Telp</label>
+                                        <input type="text" class="form-control" id="no_telp" name="no_telp" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="alamat" class="form-label">Alamat</label>
+                                        <textarea class="form-control" id="alamat" name="alamat" rows="2" required></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="catatan" class="form-label">Catatan</label>
+                                        <textarea class="form-control" id="catatan" name="catatan" rows="2"></textarea>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                    <button type="submit" class="btn btn-primary">Simpan</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

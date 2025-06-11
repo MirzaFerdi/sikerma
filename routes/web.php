@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DudiController;
+use App\Http\Controllers\MouController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,4 +36,9 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/dudi/{dudi}', [DudiController::class, 'update'])->name('dudi.update');
     Route::delete('/dudi/{dudi}', [DudiController::class, 'destroy'])->name('dudi.destroy');
     Route::put('/dudi/update-status/{dudi}', [DudiController::class, 'updateStatus'])->name('dudi.validate');
+
+    Route::get('/mou', [MouController::class, 'index'])->name('mou.index');
+    Route::post('/mou/store', [MouController::class, 'store'])->name('mou.store');
+    Route::put('/mou/{mou}', [MouController::class, 'update'])->name('mou.update');
+    Route::delete('/mou/{mou}', [MouController::class, 'destroy'])->name('mou.destroy');
 });

@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             AdminSeeder::class,
             KoordinatorSeeder::class,
             DudiSeeder::class,
+            MouSeeder::class,
         ]);
     }
 }

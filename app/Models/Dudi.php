@@ -53,4 +53,9 @@ class Dudi extends Model
     {
         return $this->belongsTo(Koordinator::class, 'id_koordinator');
     }
+
+    public function mou()
+    {
+        return $this->hasMany(Mou::class, 'id_dudi');
+    }
 }
