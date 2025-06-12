@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DudiController;
 use App\Http\Controllers\MouController;
+use App\Http\Controllers\IaPksController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,4 +42,6 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/mou/store', [MouController::class, 'store'])->name('mou.store');
     Route::put('/mou/{mou}', [MouController::class, 'update'])->name('mou.update');
     Route::delete('/mou/{mou}', [MouController::class, 'destroy'])->name('mou.destroy');
+
+    Route::get('/ia-pks', [IaPksController::class, 'index'])->name('ia-pks.index');
 });

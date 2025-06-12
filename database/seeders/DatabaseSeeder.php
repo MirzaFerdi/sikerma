@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             KoordinatorSeeder::class,
             DudiSeeder::class,
             MouSeeder::class,
+            IaPksSeeder::class,
         ]);
     }
 }

@@ -6,8 +6,8 @@
     <div class="container-fluid">
         <div class="card">
             <div class="card-header">
-                <h4>Daftar MoU</h4>
-                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addMouModal">
+                <h4 class="card-title">Daftar MoU</h4>
+                <button type="button" class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#addMouModal">
                     <i class="fas fa-plus"></i> Tambah MoU
                 </button>
             </div>

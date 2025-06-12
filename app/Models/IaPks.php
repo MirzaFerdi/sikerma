@@ -5,37 +5,33 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Mou extends Model
+class IaPks extends Model
 {
     use HasFactory;
 
-    protected $table = 'mou';
-
     protected $timezone = 'Asia/Jakarta';
 
+    protected $table = 'ia_pks';
+
     protected $fillable = [
-        'id_dudi',
-        'no_mou',
+        'id_mou',
+        'no_dokumen',
         'judul_dokumen',
+        'jenis_dokumen',
+        'jenis_kategori',
+        'file_pks',
         'tanggal_mulai',
         'tanggal_selesai',
-        'file_mou',
     ];
-
     protected $casts = [
         'tanggal_mulai' => 'date:d-m-Y',
         'tanggal_selesai' => 'date:d-m-Y',
-        'created_at' => 'datetime:d-m-Y H:i',
-        'updated_at' => 'datetime:d-m-Y H:i',
     ];
 
-    public function dudi()
-    {
-        return $this->belongsTo(Dudi::class, 'id_dudi');
-    }
 
-    public function iaPks()
+
+    public function mou()
     {
-        return $this->hasMany(IaPks::class, 'id_mou');
+        return $this->belongsTo(Mou::class, 'id_mou');
     }
 }
