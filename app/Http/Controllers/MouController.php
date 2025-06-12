@@ -48,7 +48,7 @@ class MouController extends Controller
         $mou->tanggal_selesai = $request->tanggal_selesai;
         if ($request->hasFile('file_mou')) {
             $filename = time() . '_' . $request->file('file_mou')->getClientOriginalName();
-            $request->file('file_mou')->storeAs('public/file_mous', $filename);
+            $request->file('file_mou')->storeAs('public/file/mou', $filename);
             $mou->file_mou = $filename;
         }
         $mou->save();

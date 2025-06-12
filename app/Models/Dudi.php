@@ -58,4 +58,9 @@ class Dudi extends Model
     {
         return $this->hasMany(Mou::class, 'id_dudi');
     }
+
+    public function iaPks()
+    {
+        return $this->hasMany(IaPks::class, 'id_dudi');
+    }
 }

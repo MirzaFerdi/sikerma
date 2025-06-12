@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('ia_pks', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_mou')->constrained('mou')->onDelete('cascade');
+            $table->foreignId('id_dudi')->constrained('dudi')->onDelete('cascade');
             $table->string('no_dokumen');
             $table->string('judul_dokumen');
             $table->string('jenis_dokumen');

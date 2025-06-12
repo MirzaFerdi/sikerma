@@ -34,8 +34,4 @@ class Mou extends Model
         return $this->belongsTo(Dudi::class, 'id_dudi');
     }
 
-    public function iaPks()
-    {
-        return $this->hasMany(IaPks::class, 'id_mou');
-    }
 }

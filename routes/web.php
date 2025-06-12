@@ -44,4 +44,7 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/mou/{mou}', [MouController::class, 'destroy'])->name('mou.destroy');
 
     Route::get('/ia-pks', [IaPksController::class, 'index'])->name('ia-pks.index');
+    Route::post('/ia-pks/store', [IaPksController::class, 'store'])->name('ia-pks.store');
+    Route::put('/ia-pks/{iaPks}', [IaPksController::class, 'update'])->name('ia-pks.update');
+    Route::delete('/ia-pks/{iaPks}', [IaPksController::class, 'destroy'])->name('ia-pks.destroy');
 });

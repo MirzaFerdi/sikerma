@@ -94,7 +94,7 @@
                                 <td>{{ $mou->judul_dokumen }}</td>
                                 <td>
                                     @if ($mou->file_mou)
-                                        <a href="{{ asset('storage/file_mous/' . $mou->file_mou) }}" target="_blank">
+                                        <a href="{{ asset('storage/file/mou/' . $mou->file_mou) }}" target="_blank">
                                             Lihat File
                                         </a>
                                     @else

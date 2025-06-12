@@ -14,7 +14,7 @@ class IaPks extends Model
     protected $table = 'ia_pks';
 
     protected $fillable = [
-        'id_mou',
+        'id_dudi',
         'no_dokumen',
         'judul_dokumen',
         'jenis_dokumen',
@@ -29,9 +29,9 @@ class IaPks extends Model
     ];
 
 
-
-    public function mou()
+    public function dudi()
     {
-        return $this->belongsTo(Mou::class, 'id_mou');
+        return $this->belongsTo(Dudi::class, 'id_dudi');
     }
+
 }

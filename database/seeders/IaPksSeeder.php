@@ -15,7 +15,7 @@ class IaPksSeeder extends Seeder
     {
         DB::table('ia_pks')->insert([
             [
-                'id_mou' => 1,
+                'id_dudi' => 1,
                 'no_dokumen' => 'PKS-001',
                 'judul_dokumen' => 'Perjanjian Kerjasama PKS 1',
                 'jenis_dokumen' => 'PKS',
@@ -25,7 +25,7 @@ class IaPksSeeder extends Seeder
                 'tanggal_selesai' => '2026-01-01',
             ],
             [
-                'id_mou' => 2,
+                'id_dudi' => 2,
                 'no_dokumen' => 'PKS-002',
                 'judul_dokumen' => 'Perjanjian Kerjasama PKS 2',
                 'jenis_dokumen' => 'PKS',
