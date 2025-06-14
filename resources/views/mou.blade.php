@@ -7,7 +7,8 @@
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title">Daftar MoU</h4>
-                <button type="button" class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#addMouModal">
+                <button type="button" class="btn btn-primary btn-sm float-right" data-toggle="modal"
+                    data-target="#addMouModal">
                     <i class="fas fa-plus"></i> Tambah MoU
                 </button>
             </div>
@@ -82,7 +83,7 @@
                             <th>File MoU</th>
                             <th>Tgl. Mulai</th>
                             <th>Tgl. Selesai</th>
-                            <th>View</th>
+                            <th class="text-center">View</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -102,19 +103,21 @@
                                     @endif
                                 <td>{{ $mou->tanggal_mulai->format('d-m-Y') }}</td>
                                 <td>{{ $mou->tanggal_selesai->format('d-m-Y') }}</td>
-                                <td>
-                                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
-                                        data-target="#editMouModal{{ $mou->id }}">
-                                        <i class="fas fa-edit"></i>Edit MoU
-                                    </button>
-                                    <form action="{{ route('mou.destroy', $mou->id) }}" method="POST"
-                                        class="d-inline" onsubmit="return confirm('Yakin ingin menghapus MoU ini?')">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger btn-sm">
-                                            <i class="fas fa-trash"></i> Hapus
+                                <td class="text-center">
+                                    <div class="btn-group">
+                                        <button type="button" style="margin-right: 5px;" class="btn btn-info btn-sm" data-toggle="modal"
+                                            data-target="#editMouModal{{ $mou->id }}">
+                                            <i class="fas fa-edit"></i>Edit MoU
                                         </button>
-                                    </form>
+                                        <form action="{{ route('mou.destroy', $mou->id) }}" method="POST" class="d-inline"
+                                            onsubmit="return confirm('Yakin ingin menghapus MoU ini?')">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger btn-sm">
+                                                <i class="fas fa-trash"></i> Hapus
+                                            </button>
+                                        </form>
+                                    </div>
                                 </td>
                             </tr>
                             <!-- Edit Modal -->
@@ -123,8 +126,10 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="editMouModalLabel{{ $mou->id }}">Edit MoU</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <h5 class="modal-title" id="editMouModalLabel{{ $mou->id }}">Edit MoU
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
@@ -159,12 +164,12 @@
                                                     <div class="custom-file">
                                                         <input type="file" name="file_mou" class="custom-file-input"
                                                             id="file_mou">
-                                                        <label class="custom-file-label" for="file_mou">Choose
+                                                        <label class="custom-file-label" for="file_mou">Pilih
                                                             file</label>
                                                         @if ($mou->file_mou)
                                                             <small class="form-text text-muted">
                                                                 File saat ini: <a
-                                                                    href="{{ asset('storage/file_mous/' . $mou->file_mou) }}"
+                                                                    href="{{ asset('storage/file/mou/' . $mou->file_mou) }}"
                                                                     target="_blank">{{ $mou->file_mou }}</a>
                                                             </small>
                                                         @else
@@ -202,4 +207,3 @@
         </div>
     </div>
 @endsection
-

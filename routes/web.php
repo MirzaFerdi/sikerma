@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DudiController;
 use App\Http\Controllers\MouController;
 use App\Http\Controllers\IaPksController;
+use App\Http\Controllers\ArsipController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,4 +48,6 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/ia-pks/store', [IaPksController::class, 'store'])->name('ia-pks.store');
     Route::put('/ia-pks/{iaPks}', [IaPksController::class, 'update'])->name('ia-pks.update');
     Route::delete('/ia-pks/{iaPks}', [IaPksController::class, 'destroy'])->name('ia-pks.destroy');
+
+    Route::get('/arsip', [ArsipController::class, 'index'])->name('arsip.index');
 });

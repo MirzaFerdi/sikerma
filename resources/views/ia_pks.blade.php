@@ -104,7 +104,7 @@
                                     <th>Tanggal Mulai</th>
                                     <th>Tanggal Selesai</th>
                                     <th>File PKS</th>
-                                    <th>Aksi</th>
+                                    <th class="text-center">View</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -127,7 +127,7 @@
                                                 Tidak ada file
                                             @endif
                                         </td>
-                                        <td>
+                                        <td class="text-center">
                                             <button class="btn btn-sm btn-info" data-toggle="modal"
                                                 data-target="#editModal{{ $p->id }}">
                                                 <i class="fas fa-edit"></i> Edit
@@ -220,8 +220,15 @@
                                                                 <label class="custom-file-label" for="file_pks">Pilih
                                                                     file</label>
                                                             </div>
-                                                            <small class="form-text text-muted">Biarkan kosong jika tidak
-                                                                ingin mengubah file.</small>
+                                                            @if($p->file_pks)
+                                                                <small class="form-text text-muted">
+                                                                    File saat ini: <a
+                                                                        href="{{ asset('storage/file/ia_pks/' . $p->file_pks) }}"
+                                                                        target="_blank">{{ $p->file_pks }}</a>
+                                                                </small>
+                                                            @else
+                                                                <small class="form-text text-muted">Tidak ada file saat ini</small>
+                                                            @endif
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="tanggal_mulai">Tanggal Mulai</label>

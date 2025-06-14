@@ -26,8 +26,8 @@ class MouSeeder extends Seeder
                 'id_dudi' => 2,
                 'no_mou' => 'MOU-002',
                 'judul_dokumen' => 'Kerjasama Pendidikan',
-                'tanggal_mulai' => '2025-02-01',
-                'tanggal_selesai' => '2026-02-01',
+                'tanggal_mulai' => '2025-01-01',
+                'tanggal_selesai' => '2025-03-01',
                 'file_mou' => 'mou-002.pdf',
             ],
         ]);
